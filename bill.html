@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Adjust styles as needed */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .navbar-brand p {
+      color: #ccc;
+      margin-bottom: 0;
+    }
+    .billing-info {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      width: 100%;
+      max-width: 500px;
+      z-index: 1000;
+    }
+    .product-details {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Customer Details -->
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-user"></i> Customer Details:
+        <p>John Doe <br>johndoe@example.com <br>123-456-7890</p>
+      </a>
+      <!-- Order Information -->
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-info-circle"></i> Order Info:
+        <p>Payment Method - UPI</p>
+      </a>
+      <!-- Delivery Location -->
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-map-marker-alt"></i> Delivery Location:
+        <p>Address: Chennai</p>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <!-- Product Details -->
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="product-details">
+          <h4>Product Details</h4>
+          <p>Product: Thirupathi Balaji Painting</p>
+          <!-- Other product details -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Billing Information -->
+  <div class="billing-info">
+    <h4>Billing Information</h4>
+    <!-- Charges -->
+    <div>
+      <h5>Charges</h5>
+      <!-- Form for Shipping Charge, Discounts, etc. -->
+      <form>
+        <div class="form-group">
+          <label for="shippingCharge">Shipping Charge</label>
+          <input type="number" class="form-control" id="shippingCharge" placeholder="Enter shipping charge">
+        </div>
+        <div class="form-group">
+          <label for="discount">Discount</label>
+          <input type="number" class="form-control" id="discount" placeholder="Enter discount">
+        </div>
+        <!-- Other charges fields -->
+      </form>
+    </div>
+    <!-- Payment Method -->
+    <div>
+      <h5>Payment Method</h5>
+      <div>
+        <label for="paymentMethod">Select Payment Method</label>
+        <select class="form-control" id="paymentMethod">
+          <option value="UPI">UPI</option>
+          <option value="bank">Bank Transfer</option>
+          <option value="cash">Cash on Delivery</option>
+        </select>
+      </div>
+      <!-- Fields for Payment Method -->
+      <div>
+        <label for="paymentAmount">Amount</label>
+        <input type="number" class="form-control" id="paymentAmount" placeholder="Enter amount">
+      </div>
+      <div>
+        <label for="accountNumber">Account Number</label>
+        <input type="text" class="form-control" id="accountNumber" placeholder="Enter account number">
+      </div>
+      <!-- Other payment method fields -->
+    </div>
+    <!-- Place Order Button -->
+    <div>
+      <button type="submit" class="btn btn-primary mt-3">Place Order</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
